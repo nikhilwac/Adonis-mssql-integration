@@ -41,4 +41,5 @@ Server.middleware.register([
 |
 */
 Server.middleware.registerNamed({
+  UserGuard: () => import('App/Middleware/UserGuard')
 })

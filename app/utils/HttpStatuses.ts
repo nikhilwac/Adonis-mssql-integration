@@ -8,4 +8,5 @@ export const enum HttpStatusCodes {
   HTTP_PERMISSION_ERROR = 403,
   HTTP_NOT_FOUND = 404,
   HTTP_BAD_REQUEST = 400,
+  HTTP_UNAUTHORIZED = 401
 }

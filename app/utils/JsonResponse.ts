@@ -8,7 +8,8 @@ export interface APIResponse {
     success: boolean;
     errors?: any;
     timestamp: string;
-    meta?: Object
+    meta?: Object;
+    details?: Object;
 }
 
 const timestamp = DateTime.now().toISO()
@@ -59,6 +60,23 @@ export default class JsonResponse {
             status_code,
             message: message,
             errors: errors,
+            success: false,
+            timestamp
+        };
+    }
+
+    /**
+     * Generates a unauthorized error response.
+     * @param errors - The validation errors to include in the response.
+     * @param message - A validation error message.
+     * @param status_code - An HTTP status code (default is 422).
+     * @returns A JSON response object.
+     */
+    static unAuthorized(errors: any = {}, message: string = 'Unauthorized',status_code: HttpStatusCodes = HttpStatusCodes.HTTP_UNAUTHORIZED): APIResponse {
+        return {
+            status_code,
+            message: message,
+            details: errors,
             success: false,
             timestamp
         };
