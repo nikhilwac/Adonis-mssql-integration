@@ -58,4 +58,18 @@ export default class AuthenticationController {
 
     ctx.response.status(httpStatusCode).json(response);
   }
+
+  /**
+   * dashboard
+   */
+  public dashboard(ctx: HttpContextContract) {
+    let httpStatusCode: number = HttpStatusCodes.HTTP_VALIDATION_ERROR;
+    let isSuccess: boolean = false;
+    let response: APIResponse;
+
+    httpStatusCode = HttpStatusCodes.HTTP_OK;
+      isSuccess = true;
+      response = JsonResponse.success({}, "Dashboard details fetched Success");
+      ctx.response.status(httpStatusCode).json(response);
+  }
 }
