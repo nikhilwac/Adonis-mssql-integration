@@ -1,6 +1,6 @@
 # AdonisJS MSSQL Integration
-**EXPERIMENTAL** vNext Participant Lifecycle Management Bounded Context
-
+**EXPERIMENTAL** 
+This sample project created for integrating mssql to adonisjs version 5
 # Install
 1. Install `npm`
 2. Install `nvm` via `https://github.com/nvm-sh/nvm`
